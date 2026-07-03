@@ -844,9 +844,10 @@ if (!req.file) {
         formData.append('student_name', student_name || '');
         formData.append('event_name', event_name || '');
 
-        const pythonResponse = await axios.post('http://localhost:8000/api/analyze-proof', formData, {
-            headers: formData.getHeaders()
-        });
+const aiResponse = await axios.post('https://event-management-ai-x5xo.onrender.com/api/analyze-proof', {
+    image_url: imageUrl,
+    required_fields: requiredFields
+});
 
         const { image_hash, ocr_match_percent } = pythonResponse.data;
 

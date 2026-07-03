@@ -6,3 +6,4 @@ ImageHash
 pytesseract
 opencv-python-headless
 numpy
+requests
