@@ -1,0 +1,9 @@
+------boundary123
+Content-Disposition: form-data; name="id"
+
+1
+------boundary123
+Content-Disposition: form-data; name="avatar"; filename="test.png"
+Content-Type: image/png
+
+------boundary123--

@@ -1,0 +1,43 @@
+name: sv_diemrenluyen
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_local_notifications: ^16.3.0
+  timezone: ^0.9.4
+  
+  # Thêm dòng này (Thư viện giải mã ảnh tĩnh chạy được trên mọi nền tảng)
+
+  dio: ^5.4.0
+  google_sign_in: 6.2.1
+  google_sign_in_web: ^0.12.4+4
+  mobile_scanner: ^5.0.0
+  geolocator: ^11.0.0
+  image_picker: ^1.0.7
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.5.5
+  flutter_downloader: ^1.11.7
+  url_launcher: ^6.2.6
+  image: ^4.8.0
+  qr_code_vision: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  # Khai báo assets phải thụt lề chuẩn như sau:
+  assets:
+    - assets/img/ctut-placeholder.jpg
+ 

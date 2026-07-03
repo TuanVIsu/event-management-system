@@ -1,0 +1,61 @@
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:21:/// Represents a signed-in Google account, providing account information as well
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:27:/// cross-platform results, clients should not call [authenticate] to obtain a
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:28:/// new [GoogleSignInAccount] instance until after a call to [signOut].
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:30:class GoogleSignInAccount implements GoogleIdentity {
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:31:  GoogleSignInAccount._(
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:54:  /// Returns authentication tokens for this account.
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:77:    if (other is! GoogleSignInAccount) {
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:80:    final GoogleSignInAccount otherAccount = other;
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:81:    return displayName == otherAccount.displayName &&
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:82:        email == otherAccount.email &&
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:83:        id == otherAccount.id &&
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:84:        photoUrl == otherAccount.photoUrl &&
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:86:            otherAccount._authenticationTokens.idToken;
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:106:    return 'GoogleSignInAccount:$data';
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:112:/// If the instance was obtained from a [GoogleSignInAccount], any requests
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:113:/// issued by this client will be for tokens for that account.
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:120:/// - If no user has been authenticated, this may trigger a combined
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:122:///   [GoogleSignIn]'s authenticationEvents stream will be informed of the
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:250:  /// https://support.google.com/accounts/answer/13533235.
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:279:/// GoogleSignIn allows you to authenticate Google users.
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:285:  /// [initialize] must be called on this instance exactly once, and its future
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:289:  /// Initializes the sign in manager with the given configuration.
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:312:  /// If provided, [hostedDomain] restricts account selection to accounts in
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:314:  Future<void> initialize({
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:330:        GoogleSignInPlatform.instance.authenticationEvents;
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:349:      case AuthenticationEventSignIn():
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:351:          GoogleSignInAuthenticationEventSignIn(
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:352:            user: GoogleSignInAccount._(event.user, event.authenticationTokens),
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:355:      case AuthenticationEventSignOut():
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:357:          GoogleSignInAuthenticationEventSignOut(),
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:366:  Stream<GoogleSignInAuthenticationEvent> get authenticationEvents {
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:376:  // for authenticationEvents.
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:379:  /// Attempts to sign in a previously authenticated user with minimal
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:389:  /// Use [authenticate] instead to trigger a full interactive sign in process.
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:397:  /// - If null is returned, applications must rely on [authenticationEvents] to
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:405:  /// [GoogleSignInAccount] for a successful sign in or null if the attempt
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:414:  Future<GoogleSignInAccount?>? attemptLightweightAuthentication({
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:420:          .attemptLightweightAuthentication(
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:421:            const AttemptLightweightAuthenticationParameters(),
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:441:          return Future<GoogleSignInAccount?>.value();
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:444:      return Future<GoogleSignInAccount?>.error(e, stack);
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:449:  /// attemptLightweightAuthentication.
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:451:  /// This is a separate method from [attemptLightweightAuthentication] to allow
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:452:  /// using async/await, since [attemptLightweightAuthentication] can't use
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:454:  Future<GoogleSignInAccount?> _resolveLightweightAuthenticationAttempt(
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:464:      final GoogleSignInAccount account = GoogleSignInAccount._(
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:470:          GoogleSignInAuthenticationEventSignIn(user: account),
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:473:      return account;
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:508:  /// Whether or not the current platform supports the [authenticate] method.
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:510:  /// If this returns false, [authenticate] will throw an [UnsupportedError] if
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:515:  bool supportsAuthenticate() =>
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:516:      GoogleSignInPlatform.instance.supportsAuthenticate();
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:529:  /// Returns a [GoogleSignInAccount] with valid authentication tokens for a
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:541:  Future<GoogleSignInAccount> authenticate({
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:546:          .authenticate(AuthenticateParameters(scopeHint: scopeHint));
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:547:      final GoogleSignInAccount account = GoogleSignInAccount._(
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:553:          GoogleSignInAuthenticationEventSignIn(user: account),
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:556:      return account;
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:569:  /// [GoogleSignInAccount.authorizationClient] rather than this method, as this
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:582:        GoogleSignInAuthenticationEventSignOut(),
+C:\Users\LOQ_PC\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in-7.2.0\lib\google_sign_in.dart:594:        GoogleSignInAuthenticationEventSignOut(),

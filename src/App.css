@@ -1,0 +1,166 @@
+:root {
+  --border: #e2e8f0;
+  --text-h: #0f172a;        
+  --shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05);
+  --accent: #4f46e5;          
+  --accent-bg: #f5f3ff;       
+  --sidebar-bg: #0f172a;       /* Tông tối Luxury */
+  --sidebar-text: #94a3b8;     
+  --sidebar-hover: #1e293b;    
+}
+
+/* Biến Sidebar thành dạng tối lịch lãm */
+.custom-sidebar {
+  width: 270px !important;
+  min-width: 270px !important; /* Khóa cứng chiều rộng chống co rúm */
+  background-color: var(--sidebar-bg) !important;
+  border-right: none !important;
+  height: 100vh !important;
+  position: sticky !important;
+  top: 0;
+  padding: 24px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  z-index: 1020;
+}
+
+/* Định dạng các mục liên kết trong sidebar */
+.custom-sidebar-link {
+  color: var(--sidebar-text) !important;
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  margin-bottom: 6px !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important; /* Căn giữa icon và chữ theo chiều dọc */
+  gap: 12px !important; /* Tạo khoảng cách an toàn giữa icon và chữ */
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.custom-sidebar-link:hover {
+  background-color: var(--sidebar-hover) !important;
+  color: #ffffff !important;
+}
+
+/* Khi mục được chọn (Active) */
+.custom-sidebar-link.active-item {
+  background-color: var(--accent) !important; 
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4) !important;
+}
+
+/* Định dạng riêng cho icon để không bị méo góc */
+.custom-sidebar-link i {
+  font-size: 1.25rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important; /* Cố định chiều rộng icon để chữ thẳng hàng */
+}
+
+/* Thẻ card nội dung bên phải nổi khối */
+.card, .dashboard-card {
+  border: none !important;
+  border-radius: 16px !important; 
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04) !important;
+  background-color: #ffffff !important;
+}
+.custom-sidebar::-webkit-scrollbar-thumb {
+  background: #334155 !important;
+}
+.custom-sidebar::-webkit-scrollbar-track {
+  background: #0f172a !important;
+}
+
+/* ==========================================================================
+   4. ĐỒNG BỘ MÀU SẮC CHO CÁCH TRANG NỘI DUNG BÊN PHẢI
+   ========================================================================== */
+
+/* Nâng cấp chữ số Dashboard sắc nét hơn */
+.dashboard-card h3, 
+.dashboard-card h4, 
+.dashboard-card .card-title {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-weight: 700 !important;
+  color: var(--text-h) !important;
+  letter-spacing: -0.02em;
+}
+
+/* Định dạng Header của mọi bảng dữ liệu (Table) */
+.table thead.table-light th,
+.table thead th {
+  background-color: #f8fafc !important;
+  color: #64748b !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 14px 16px !important;
+}
+
+.table tbody td {
+  padding: 14px 16px !important;
+  vertical-align: middle !important;
+  color: #334155 !important;
+  font-size: 0.875rem !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+/* Biến đổi các ô chứa Icon (Icon Box) trên Dashboard */
+.icon-box-accent {
+  background-color: var(--accent-bg) !important;
+  color: var(--accent) !important;
+}
+
+.icon-box-success {
+  background-color: #ecfdf5 !important;
+  color: #10b981 !important;
+}
+
+.icon-box-warning {
+  background-color: #fffbeb !important;
+  color: #f59e0b !important;
+}
+
+.icon-box-danger {
+  background-color: #fef2f2 !important;
+  color: #ef4444 !important;
+}
+
+/* Nút bấm đồng bộ màu Indigo chủ đạo */
+.btn-indigo-primary {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-indigo-primary:hover {
+  background-color: #4338ca !important; /* Indigo đậm hơn khi hover */
+  border-color: #4338ca !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important;
+}
+
+.btn-indigo-outline {
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  background-color: transparent !important;
+  font-weight: 600 !important;
+}
+
+.btn-indigo-outline:hover {
+  background-color: var(--accent-bg) !important;
+  color: var(--accent) !important;
+}
+
+/* Tinh chỉnh màu tab hệ thống */
+.custom-tabs .nav-link.active {
+  color: var(--accent) !important;
+  border-bottom: 3px solid var(--accent) !important;
+}
