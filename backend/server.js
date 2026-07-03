@@ -28,9 +28,9 @@ app.use('/uploads', express.static(legacyUploadDir));
 // =========================================================
 // 2. CẤU HÌNH GOOGLE AUTH & JWT SECURITY
 // =========================================================
-const clientId = process.env.GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID; // Đổi tên biến này thành viết HOA
 const googleClient = new OAuth2Client(GOOGLE_CLIENT_ID);
-const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
+const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET; // Nên đổi luôn biến này thành viết HOA cho đồng bộ
 
 // Tự động khởi tạo thư mục lưu trữ ảnh nếu chưa tồn tại
 if (!fs.existsSync(uploadDir)) {
@@ -59,10 +59,11 @@ const upload = multer({ storage: storage });
 // 3. KẾT NỐI DATABASE POOL (TỐI ƯU HÓA HIỆU NĂNG)
 // =========================================================
 const db = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'quanlysukien3',
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '',
+    database: process.env.DB_DATABASE || 'quanlysukien3',
+    port: process.env.DB_PORT || 3306,
     charset: 'utf8mb4_unicode_ci',
     waitForConnections: true,
     connectionLimit: 10,
@@ -324,7 +325,7 @@ app.post('/api/auth/google', async (req, res) => {
                 }
 
                 ensureUserPassword(user, (updatedUser) => {
-                    const token = jwt.sign({ id: updatedUser.id, role: updatedUser.role }, JWT_SECRET, { expiresIn: '1d' });
+                    const JWT_SECRET = process.env.JWT_SECRET || 'super_secret_key_default';
                     res.json({ token, user: { ...updatedUser, avatar: resolvedAvatar, cohort } });
                 });
             } else {
@@ -1390,9 +1391,9 @@ app.delete('/api/criteria/:type/:id', (req, res) => {
 // =========================================================
 // 5. KHỞI ĐỘNG MÁY CHỦ BACKEND (MẶC ĐỊNH CỔNG CẤU HÌNH: 5000)
 // =========================================================
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`🚀 Server đang chạy mượt mà tại địa chỉ công khai: http://localhost:${PORT}`);
+    console.log(`🚀 Server đang chạy tại cổng: ${PORT}`);
 });
 
 // =========================================================
