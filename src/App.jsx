@@ -14,7 +14,7 @@ import Support from './pages/Admin/Support';
 
 // Import trang đăng nhập và trang Sinh viên
 import Login from './pages/Login';
-import Checkin from './pages/student/Checkin';
+import Checkin from "./pages/student/Checkin";
 import { getTopEventMatch, matchesNaturalQuery, normalizeText } from './utils/searchUtils';
 
 const buildAvatarUrl = (user) => {
