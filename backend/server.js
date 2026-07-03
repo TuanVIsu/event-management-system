@@ -28,9 +28,9 @@ app.use('/uploads', express.static(legacyUploadDir));
 // =========================================================
 // 2. CẤU HÌNH GOOGLE AUTH & JWT SECURITY
 // =========================================================
-const GOOGLE_CLIENT_ID = '1021190295168-vsv0rk0pmnq169f4ru3msve4v8oi1js2.apps.googleusercontent.com';
+const clientId = process.env.GOOGLE_CLIENT_ID;
 const googleClient = new OAuth2Client(GOOGLE_CLIENT_ID);
-const JWT_SECRET = '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';
+const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
 
 // Tự động khởi tạo thư mục lưu trữ ảnh nếu chưa tồn tại
 if (!fs.existsSync(uploadDir)) {
